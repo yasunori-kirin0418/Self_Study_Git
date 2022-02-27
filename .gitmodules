@@ -1,0 +1,3 @@
+[submodule "chapter_2/RickUmaliVanityWebsite"]
+	path = chapter_2/RickUmaliVanityWebsite
+	url = git@github.com:rickumali/RickUmaliVanityWebsite.git
