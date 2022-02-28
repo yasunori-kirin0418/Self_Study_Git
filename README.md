@@ -17,6 +17,22 @@ Amazon(Kindle)購入ページ：[Link][1]
 翻訳元ページ：[Link][3]
 - 学習用スクリプト：[Link][3-1]
 
+## 基本方針
+リポジトリルートの`studying_memo.md`に、やったこと等のメモをしていく。
+実際にGitを操作して何かファイルを作成する場合、以下のディレクトリ構造下でファイルを作成する。
+
+```
+Self_Study_Git
+└chapter_$
+  ├dir_1
+  │ ├.git
+  │ └files
+  │
+  └dir_2
+    ├.git
+    └files
+```
+
 <!-- Links -->
 [1]: https://www.amazon.co.jp/%E7%8B%AC%E7%BF%92Git-%E3%83%AA%E3%83%83%E3%82%AF%E3%83%BB%E3%82%A6%E3%83%9E%E3%83%AA-ebook/dp/B01C2TRNUG
 [2]: https://www.seshop.com/product/detail/18861
