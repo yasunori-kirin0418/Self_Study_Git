@@ -45,3 +45,67 @@ gitのヘルプの確認
     vimと同じなんだよなぁ……
 
 <!-- }}} -->
+
+## chapter_4 {{{
+
+```shell
+mkdir buildtools
+cd buildtools
+git init
+git status
+echo -n contents > filefixup.bat
+git status
+git add filefixup.bat
+git status
+git commit -m "This is the first commit message"
+git log
+```
+
+↑を見てもらえば分かるが、リポジトリの作成と、リポジトリ内にファイルを作成して、
+ステージングとコミットをした。
+Gitの基本操作といった感じ。
+
+### 課題
+
+1. 作りたてのリポジトリで`git log`を実行したときのエラーログとその理由
+    ```error_log
+    fatal: your current branch 'main' does not have any commits yet
+    ```
+    `git log`はコミットログを見るもので、コミットしないとログは出せない。
+2. 以下を実行
+
+    ```shell
+    mkdir twoatonece
+    cd twoatonece
+    git init
+    echo -n contents > file.txt
+    git add file.txt
+    echo -n newcontents > file.txt
+    git status
+    ```
+
+    実行結果:
+
+    ```shell
+    On branch main
+
+    No commits yet
+
+    Changes to be committed:
+      (use "git rm --cached <file>..." to unstage)
+        new file:   file.txt
+
+    Changes not staged for commit:
+      (use "git add <file>..." to update what will be committed)
+      (use "git restore <file>..." to discard changes in working directory)
+        modified:   file.txt
+     ```
+
+    file.txtは2つ表示される。
+
+3. OS間の改行コード問題の話し。
+    LinuxでしかGitを使わないので問題無し。
+    詳しい解説は`study_files/answer_and_supplement_files/TY-Git_Answers.txt:59`
+    Windowsの方がやっかい問題。
+
+<!-- }}} -->
