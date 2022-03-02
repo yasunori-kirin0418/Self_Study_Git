@@ -125,6 +125,43 @@ GitのGUIクライアントを使って、リポジトリを作成してファ�
 
 ## chapter_6 {{{
 
+ステージングについての解説とdiffについて。
+実際に、ファイルを作成して、コードを書いて`add/diff`を実行した。
+
+### 知見
+`add --dry-run`で、コマンド実行後の内容だけ表示される。実際には実行されない。
+
+`diff --staged`でステージングしたものと、`HEAD`とのdiffが見れる。
+ステージングしてないファイルのdiffは見れない。
+
+### 課題
+
+#### 6.4.1
+
+1. `diff --staged`の代り
+    `diff --cached`
+2. `add --dry-run`の代り
+    `add -n`
+3. catコマンドで行番号を表示する。
+    `cat -n <file>`
+4. `git log --oneline`の長い形式
+    `git log --pretty=format:'%C(auto)%h %d %s'`
+    答えの方:
+        `git log --format=oneline --abbrev-commit`
+5. `git commit -a`の`-a`スイッチの長い形式
+    `git commit -all`
+
+
+#### 6.4.2 アンステージングする方法。
+
+ヒントには以下のコマンドが紹介されている。
+`git rm --cached <file>...`
+statusコマンドで紹介されている方法。
+`git restore --staged <file>...`
+
+
+#### 6.4.3
+ファイルを追加して、`git log --shortstat --oneline`を実行してみる。
 
 
 <!-- }}} -->
