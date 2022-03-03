@@ -202,7 +202,91 @@ GUIを使って部分的にコミットする。
 
 ## chapter_8 {{{
 
+`git log`を使いたおす章。
+`git checkout <SHA1_ID>`で過去のコミットにチェックアウトする。
+`detached HEAD`の説明あり。
+`git tag`で過去のコミットにタグを付ける。
 
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:203`
+
+#### 8.5.1
+
+1. `git log --reverse`
+    逆順でコミット表示する。
+    正直どちらも体感的に速度の変化を感じなかった。
+    詳しくは回答を参照。
+2. `git log -<n>`
+    <n>を数値で指定すると最新から<n>件だけ、
+    `--reverse`使用中なら、逆順で<n>件だけコミットを表示する。
+3. `git log --date=relative`で現在の時刻から相対時間で表示する。
+    `git log --relative-date`でも同じ結果になる模様。(答え見た)
+4. あれ、chapter_6でも同じ様な問題が…。
+    `--pretty=oneline --abbrev-commit`のショートカットらしい。(答え見た)
+    `--oneline`と同じ表示をするだけならいろいろあるっていう話。
+
+### 8.5.2
+
+適当に`math/`を変更する。
+`git commit --amend -m 'Fix commit' -m 'Second paragraph' -m 'Wall of text'`
+↑これで`math/`最新のコミットを修正する。
+
+### 8.5.3
+
+```
+git rev-parse main~3
+git show main@{3}
+git show main^^^
+git rev-parse :/"Removed a and b"
+```
+
+1. main~3はmainから3つ前のコミット
+    main@{3}は、mainを1番目として3番目のコミット
+    main^^^は、main~3と同じ
+    :/"Removed a and b"は、このログメッセージを持つコミット
+2. 詳しくは答えを…
+3. 使えた。zshなら途中までタグ名を入力すれば補完してくれる。
+4. @{n}以外は使えた。
+    答えの方では使えないと解説されているが、バージョンの問題かと。
+    `git version 2.35.1`を使用中
+
+### 8.5.4
+
+`four_files_galore`でコミットは可能
+コミットしたときは特別エラーはでないが、`detached HEAD`であることは表示される。
+その状態で`main`にチェックアウトすると、以下の警告が出た。
+
+```shell
+Warning: you are leaving 1 commit behind, not connected to
+any of your branches:
+
+  8a73211 test detached HEAD
+
+If you want to keep it by creating a new branch, this may be a good time
+to do so with:
+
+ git branch <new-branch-name> 8a73211
+
+Switched to branch 'main'
+```
+
+### 8.5.5
+
+タグの削除は、`git tag -d <tag_name>`
+
+### 8.5.6
+
+1. 最初のコミットメッセージと日付時刻
+    メッセージ:The very first commit. Hi!
+    日付時刻:スクリプトを実行した時間から5日前
+2. 'ubiquitous'が含まれるコミットのSHA1_ID
+    `git rev-parse :/'ubiquitous'`で取得可能
+    SHA1_ID:c426060b58e0959809bf4965254b606fdba535d6
+3. 'rgu@freeshell.org'というアドレスのコミッターのコミットID
+    `git log --author='rgu@freeshell.org'`
+    SHA1_ID:c89f5664fc7174fae59bc8a29ed38a5c42cb1c25
 
 <!-- }}} -->
 
