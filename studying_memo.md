@@ -136,6 +136,9 @@ GitのGUIクライアントを使って、リポジトリを作成してファ�
 
 ### 課題
 
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:107`
+
 #### 6.4.1
 
 1. `diff --staged`の代り
@@ -186,6 +189,9 @@ GUIを使って部分的にコミットする。
 `git checkout <file>`でも同じことできるけどね…。
 
 ### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:142`
 
 #### 7.5.1
 
