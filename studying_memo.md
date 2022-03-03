@@ -287,11 +287,19 @@ Switched to branch 'main'
 3. 'rgu@freeshell.org'というアドレスのコミッターのコミットID
     `git log --author='rgu@freeshell.org'`
     SHA1_ID:c89f5664fc7174fae59bc8a29ed38a5c42cb1c25
+4. 昨日以降のコミットを表示する。
+    `git log --since=yesterday`
 
 <!-- }}} -->
 
 ## template {{{
 
+
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:`
 
 
 <!-- }}} -->
