@@ -292,6 +292,72 @@ Switched to branch 'main'
 
 <!-- }}} -->
 
+## chapter_9 {{{
+
+ブランチの操作。追加と削除。
+stashの使い方。
+```shell
+git stash
+git stash list
+git stash pop
+```
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:266`
+
+#### 9.5.1
+
+1. 課題が始まる前にanother_fix_branchでは作業がコミットされていない。
+    その状態だと、GUIクライアントを使用してもnew_featureブランチへは、チェックアウトできない。
+2-3. ブランチを作成すると、それらのブランチへチェックアウトする。
+    現在または過去へはチェックアウトできる？
+
+#### 9.5.2
+
+1. 削除する代りに名前を変更する。
+    可能。`git branch -m <branch_name> <new_branch_name>`
+
+2. `git rev-parse :/'<commit log message>'`で探索可能
+
+3. `git log --graph --decorate --pretty=oneline --all --abbrev-commit`
+    `--graph`: 左端に*や|でコミットグラフを表示する
+    `--decorate`: (HEAD tag_name branch_name)を表示する
+    `--pretty=oneline --abbrev-commit`は`--oneline`と同じ
+    `--all`: 全てのブランチのコミットメッセージを表示する。
+4. ブランチを削除すると、そのブランチのコミットがどうなるか。
+    ブランチを消して良いか確認される。
+    また消すときは`git branch -D`使う様に案内される。
+
+#### 9.5.4
+
+注意: `make_lots_of_branches.sh`を実行するとき、
+`git config --global init.defaultbranch=main`にしていると、
+上手くスクリプトが動かない。
+`init.defaultbranch=master`に変更するか、
+スクリプトでmasterブランチを指定している場所をmainに変更すれば解決する。
+
+1. `lots_of_branches/`:ブランチの開始地点コミット
+    'Adding four empty files.'のコミットが開始地点
+2. 開始地点からbranch_30までにいくつのコミットがあるか
+    クッソだるい……106のコミットがあった…。
+3. random_prize_1 -> branch_18
+   random_prize_2 -> branch_12
+   random_prize_3 -> branch_33
+   branch_40のanswer.txtに答えあり。
+4. random_tag_on_fileというタグが、どのブランチに含まれているか。
+    `git branch`を使用することが指定されている。
+    `git branch --contain random_tag_on_file`で知らべることが可能。
+5. `git log --oneline --decorate --simplify-by-decoration --all --graph`
+    全てのブランチの最新のコミットと最初のコミットだけが表示される。
+    間のコミットは表示されない。
+    答えより:
+    `--simplify-by-decoration`は"Commits that are referred by some branch or tag are selected."
+    「何らかのブランチまたはタグで参照されているコミットだけを選択する」という意味。
+
+<!-- }}} -->
+
 ## template {{{
 
 
