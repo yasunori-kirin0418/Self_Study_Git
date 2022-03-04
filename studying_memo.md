@@ -358,6 +358,38 @@ git stash pop
 
 <!-- }}} -->
 
+## chapter_10 {{{
+
+マージの説明。
+意図的にコンフリクトを作って対処する。
+あくまで、コンフリクトの解説くらい。
+マージツールの紹介もあるが、gina.vimを使っているので、chaperonを活かしたい。
+`git merge --abort`は覚えておこう…。
+
+fast-forwardの説明。
+ブランチグラフが真っ直ぐになるけど、個人的にはマージコミットがあるのが好き。
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:353`
+
+1. `https://git-scm.com/docs/git-merge#_how_to_resolve_conflicts`
+    答えの方には日本語訳があり。かなり丁寧。
+2. できるだろうけど……やる？
+3. diffをやっても何も表示されない。詳しい解説は回答を…。
+4. mergesampleを作りなおして、bugfixにファイルを追加したあとに、
+`git diff --name-status main...bugfix`の実行結果
+
+    ```shell
+    M       baz
+    A       foo
+    ```
+
+5. マージコミットを作るスイッチは`--no-ff`
+
+<!-- }}} -->
+
 ## template {{{
 
 
