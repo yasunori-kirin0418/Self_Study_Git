@@ -392,13 +392,50 @@ fast-forwardの説明。
 
 ## chapter_11 {{{
 
-
+chapter_6で作った、mathリポジトリをCUIやGUIからクローンする。
+リモートリポジトリの説明。
+ベアリポジトリを作る。
+この章以降でmath.gitというベアリポジトリを、メインに使うので、
+ルートにmath.gitを配置する。
 
 ### 課題
 
 詳しい解説と回答
 `study_files/answer_and_supplement_files/TY-Git_Answers.txt:405`
 
+1. `git clone`コマンドで複製した訳ではないので、math.copyにはリモートリポジトリは生成されない。
+    math.copyはmathをコピーしたに過ぎない。
+2. クローン元のアクティブリポジトリがクローン先にも反映される。
+3. `git checkout remotes/origin/main`を実行すると、mainブランチのSHA1_IDにチェックアウトして、
+    ローカルブランチは作成されない。以下は実行後のログである。
+    結論、コマンドとしては実行可能。しかし、正しくはない。
+
+    ```shell
+    Note: switching to 'remotes/origin/main'.
+
+    You are in 'detached HEAD' state. You can look around, make experimental
+    changes and commit them, and you can discard any commits you make in this
+    state without impacting any branches by switching back to a branch.
+
+    If you want to create a new branch to retain commits you create, you may
+    do so (now or later) by using -c with the switch command. Example:
+
+      git switch -c <new-branch-name>
+
+    Or undo this operation with:
+
+      git switch -
+
+    Turn off this advice by setting config variable advice.detachedHead to false
+
+    HEAD is now at 51d545b A small update to readme.
+    ```
+
+4. リモートブランチとは違う名前でローカルブランチの作成はできる。
+    p10kでブランチ表示していると<ローカルブランチ:リモートブランチ>で表示されて、
+    ちょっとうざい。これは決してp10kがうざい訳ではなく……
+
+5. 解説を参照してください。
 
 <!-- }}} -->
 
