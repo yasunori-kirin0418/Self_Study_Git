@@ -441,12 +441,29 @@ chapter_6で作った、mathリポジトリをCUIやGUIからクローンする�
 
 ## chapter_12 {{{
 
-
+`git remote, git ls-remote`を使用して、リモートリポジトリの情報を取得、名前の変更、リポジトリの追加などを行なう。
+githubなどのサービスを利用するのがあたりまえの現状ではあるが、「知っておくと良さそう。」なtipsという感じだ。
 
 ### 課題
 
 詳しい解説と回答
 12章には無いようだ…。
+
+#### 12.4.1
+
+1. `git log --oneline --decorate`
+2. 23d3077 (origin/another_fix_branch) Renaming c and d.
+3. ef47d3f (tag: four_files_galore) Adding four empty files.
+    githubからcloneしたリポジトリのため、どのPCからcloneしても同じSHA1_IDになる。
+4. math.githubがその他の`math.*/`と違うのはSHA1_IDは理論上同じIDにならない為
+
+
+#### 12.4.5
+
+GitLabにある`rickumali/math`をクローンしてSHA1_IDを調査する。
+Gitlabの方リポジトリから更に2つコミットが追加されている。
+`0342422`と`a49addc`の二つコミットが違う。
+
 
 <!-- }}} -->
 
