@@ -467,6 +467,45 @@ Gitlabの方リポジトリから更に2つコミットが追加されている�
 
 <!-- }}} -->
 
+## chapter_13 {{{
+
+`git push`を使用して、リモート追跡ブランチを操作する。
+普通にoriginにローカルの変更をpushする他に、不用なリモート追跡ブランチの削除。
+
+chapter_13内の演習で`--set-upstream`を使ってリモートブランチを作成してみるところがあるが、
+gitのバージョンの関係で、`push.default`を設定しないといけなかったはずなので`current`にしていた。
+リモート追跡ブランチの作成に`--set-upstream`が必要なのは把握しているので、多分きっと大丈夫。
+
+`git push`の正確な構文の解説があり、内容的には忘れたころに必要になりそうな感じ。
+
+```shell
+         push先の
+         リモート
+         ┌─┴──┐
+git push origin src:dest
+└──┬───┘        └──┬───┘
+コマンド        refspec
+
+```
+
+詳しい解説は257ページ(kindle:275)
+
+13.6で`push.default`の解説あり。
+そこでは`push.default simple`にしている。
+
+自分が`push.default current`にしている理由は、キリのいいところでdevブランチをgithubにpushして、
+別環境でも作業ができるようにしたいので、結構雑にpushしている。
+`current`にしていると、「リモートブランチ無いけど作る？」みたいなことを聞いてこないので横着できる(おい!)。
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:422`
+
+課題全体の答えは`git help push`を良く読むほかない。*はい……。*
+
+<!-- }}} -->
+
 ## template {{{
 
 
