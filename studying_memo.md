@@ -580,6 +580,18 @@ hint: "git push -u" to set the upstream config as you push.
 
 <!-- }}} -->
 
+## chapter_15 {{{
+
+
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:465`
+
+
+<!-- }}} -->
+
 ## template {{{
 
 
