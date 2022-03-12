@@ -543,10 +543,40 @@ git merge origin/HEAD
 なので書籍の通りには対処していない。そこはvimから……。
 guiとそれ以外とで操作は対して変わらない。コンフリクト解決する際のコミットには自動的にメッセージが挿入されている。
 
+`git pull --ff-only`はリモートブランチをローカルブランチにマージする際、fast-forwardできるならそうするが、できない場合はマージを中止する。
+これに関しては、`git pull`の仕様を理解してないと、マージされなかったときに困惑してしまうが、
+`git merge origin/HEAD`などで対処方法を知っていれば問題無い。
+むしろ、リモートブランチとローカルブランチがコンフリクトしそうになったときに、マージを中断してくれるので、普通にプルするより安全かもしれない。
+
+
 ### 課題
 
 詳しい解説と回答
 この章には無し。
+
+この章の課題は、章の中でやった演習のあと片付けと`git rev-parse FETCH_HEAD`の確認
+
+4. `git branch --set-upstream-to=bill/main`
+    math.gitを中心に考えて操作しているが、carolとbillの間で変更のやり取りをする場合の操作になる。
+    現在使用しているGitのバージョンの問題か、上記のコマンドを実行すると以下のような案内をされる。
+
+```
+hint: If you are planning on basing your work on an upstream
+hint: branch that already exists at the remote, you may need to
+hint: run "git fetch" to retrieve it.
+hint:
+hint: If you are planning to push out a new local branch that
+hint: will track its remote counterpart, you may want to use
+hint: "git push -u" to set the upstream config as you push.
+
+日本語訳:
+リモートにすでに存在するアップストリームブランチに基づいて
+作業を行うことを計画している場合は、"git fetch"を実行して取得する必要がある場合があります。
+
+リモートの対応するブランチを追跡する新しいローカルブランチを
+プッシュすることを計画している場合は、"git push -u"を使用して、
+プッシュするときにアップストリーム構成を設定することをお勧めします。
+```
 
 <!-- }}} -->
 
