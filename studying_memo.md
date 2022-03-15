@@ -582,13 +582,24 @@ hint: "git push -u" to set the upstream config as you push.
 
 ## chapter_15 {{{
 
+Gitコマンドの仕様を細かく見ていく章
+最初は`git log`を叩きまくるだけで、正直退屈な作業でした……。
+
+gitkは使えないのでとばしました。なお、使えるようにする予定はない模様。
 
 
 ### 課題
 
 詳しい解説と回答
-`study_files/answer_and_supplement_files/TY-Git_Answers.txt:465`
+`study_files/answer_and_supplement_files/TY-t_Answers.txt:465`
 
+3. SHA1_IDの部分の色を変更する方法。
+`git log --abbrev-commit --pretty=format:'%C(bold red)%h%Creset %C(auto)%d%Creset%s'`
+ためしに、SHA1_IDの部分を太文字赤色にしたもの。それ以外は`git log --oneline`と同じ。
+解説には具体例は無いので、本来だとヘルプを読んで、いろいろ試行錯誤することになる。
+
+5. `-L <start>,<end>`と、`-L:<funcname>`の二つがあるようだ。
+後者は正規表現で指定できるみたい？
 
 <!-- }}} -->
 
