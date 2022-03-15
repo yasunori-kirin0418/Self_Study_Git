@@ -1,4 +1,5 @@
 study_files/
 chapter_*/
 math*/
-make_math_repo.sh
+make_*.sh
+lots_of_branches/
