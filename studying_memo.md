@@ -693,7 +693,7 @@ VimからGitを操作するなら、Ginaやfugitiveがあるし、今ならEclip
 
 <!-- }}} -->
 
-## template {{{
+<!-- ## template {{{
 
 
 
@@ -703,4 +703,4 @@ VimからGitを操作するなら、Ginaやfugitiveがあるし、今ならEclip
 `study_files/answer_and_supplement_files/TY-Git_Answers.txt:`
 
 
-<!-- }}} -->
+ }}} -->
