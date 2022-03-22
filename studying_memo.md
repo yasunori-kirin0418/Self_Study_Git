@@ -631,6 +631,18 @@ rebaseの基本的な操作を行う。
 
 <!-- }}} -->
 
+## chapter_17 {{{
+
+
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:510`
+
+
+<!-- }}} -->
+
 ## template {{{
 
 
