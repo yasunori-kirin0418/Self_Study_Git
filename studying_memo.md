@@ -242,9 +242,9 @@ git show main^^^
 git rev-parse :/"Removed a and b"
 ```
 
-1. main~3はmainから3つ前のコミット
+1. main\~3はmainから3つ前のコミット
     main@{3}は、mainを1番目として3番目のコミット
-    main^^^は、main~3と同じ
+    main^^^は、main\~3と同じ
     :/"Removed a and b"は、このログメッセージを持つコミット
 2. 詳しくは答えを…
 3. 使えた。zshなら途中までタグ名を入力すれば補完してくれる。
