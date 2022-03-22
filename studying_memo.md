@@ -603,6 +603,34 @@ gitkは使えないのでとばしました。なお、使えるようにする�
 
 <!-- }}} -->
 
+## chapter_16 {{{
+
+rebaseの基本的な操作を行う。
+現在のブランチの分岐元となるコミットを変更する。これがrebaseというもの。
+
+`git rebase -i`でインタラクティブモードでリベースを操作する。
+この章では、new_featureでの二つのコミットのsquashを行なった。
+二つのコミットをsquashして、mainの最新のコミットにリベースした。
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:494`
+
+1. 過去に作成したmath.bobでrebaseを実行しろということだろうが、`make_rebase_repo.sh`を使用して、そこからmath.bobを作成した。
+実行してみた結果、mainブランチにnew_featureのコミットが取り込まれるが、detachedHead状態になる。
+
+2. 上記の操作をリセットしたあとに、リストの最初にあるコミットのスカッシュをしろということだが、よく分からなかったのでスルー。
+
+3. オンラインヘルプは[こちら](https://git-scm.com/docs/git-reflog)
+`git log -g --abbrev-commit --pretty=oneline`
+
+4. こちらも詳細不明…。
+
+5. 解説を見てくれ…。
+
+<!-- }}} -->
+
 ## template {{{
 
 
