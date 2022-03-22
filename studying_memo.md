@@ -631,6 +631,36 @@ rebaseの基本的な操作を行う。
 
 <!-- }}} -->
 
+## chapter_17 {{{
+
+この章ではgit-flowやGitHub Flowの解説と実践した。
+
+### 課題
+
+詳しい解説と回答
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:510`
+
+1. git-flowとGitHub Flowの解説/紹介サイト
+[git-flow](http://nvie.com/posts/a-succsessful-git-branching-model/)
+[git-flow(日本語解説)](https://atmarkit.itmedia.co.jp/ait/series/1323/)
+[GitHub Flow](http://scottchacon.com/2011/08/31/github-flow.html)
+[GitHub Flow(日本語訳)](https://gist.github.com/Gab-km/3705015/)
+[GitHub Flow(日本語解説)](https://atmarkit.itmedia.co.jp/ait/articles/1401/21/news042.html)
+
+2. 3way-merge-commitのことを言っていると思われ。
+git-flowと違い、大量にブランチを作成しないので、merge-commitは圧倒的に少ない。
+
+3. 実行するなら`:%s/master/main`をしておく必要があり。
+
+4. [参考リンクその1](https://www.drupal.org/docs/develop/git)
+[参考リンクその2](https://www.drupal.org/docs/develop/git/git-for-drupal-project-maintainers/moving-from-a-master-to-a-major-version-branch)
+
+5. 本の中で紹介されているリンクでは必要な情報が得られず。
+解説に代替で紹介している。
+
+
+<!-- }}} -->
+
 ## template {{{
 
 
