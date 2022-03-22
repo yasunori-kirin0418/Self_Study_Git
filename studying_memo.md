@@ -591,7 +591,7 @@ gitkは使えないのでとばしました。なお、使えるようにする�
 ### 課題
 
 詳しい解説と回答
-`study_files/answer_and_supplement_files/TY-t_Answers.txt:465`
+`study_files/answer_and_supplement_files/TY-Git_Answers.txt:465`
 
 3. SHA1_IDの部分の色を変更する方法。
 `git log --abbrev-commit --pretty=format:'%C(bold red)%h%Creset %C(auto)%d%Creset%s'`
@@ -677,6 +677,18 @@ VimからGitを操作するなら、Ginaやfugitiveがあるし、今ならEclip
 ### 課題
 
 この章には解説はありません。
+
+<!-- }}} -->
+
+## chapter_20 {{{
+
+
+
+### 課題
+
+詳しい解説と回答
+`./study_files/answerand_supplement_files/TY-Git_Answers.txt:519`
+
 
 <!-- }}} -->
 
